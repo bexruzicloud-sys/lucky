@@ -1,35 +1,10 @@
-#!/usr/bin/env python3
+# Not Posixitve - HTB Challenge Solver
 
-from pwn import *
+## Description
+This script connects to the remote HTB challenge and interacts with the service.
 
-# Target
-HOST = "154.57.164.71"
-PORT = 30572
+## Usage
 
-def main():
-    # Remote connection
-    io = remote(HOST, PORT)
-
-    # Agar local test qilmoqchi bo‘lsang:
-    # io = process("./binary")
-
-    # Debug (kerak bo‘lsa)
-    # context.log_level = 'debug'
-
-    # Serverdan kelayotgan banner
-    print(io.recvline().decode())
-
-    # 👇 Bu yerda challenge logikasini yozamiz
-    # Misol uchun input yuborish:
-    # io.sendline(b"test")
-
-    # Response olish
-    # response = io.recvline()
-    # print(response)
-
-    # Interactive mode (qo‘lda ishlash uchun)
-    io.interactive()
-
-
-if __name__ == "__main__":
-    main()
+```bash
+pip install -r requirements.txt
+python3 solver.py
