@@ -1,22 +1,10 @@
-name: Dice Arena Speedrun
+# Not Posixitve - HTB Challenge Solver
 
-on:
-  push:
-    branches: [ main ]
-  workflow_dispatch: # Qo'lda ishga tushirish uchun
+## Description
+This script connects to the remote HTB challenge and interacts with the service.
 
-jobs:
-  exploit:
-    runs-on: ubuntu-latest
+## Usage
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.10'
-
-      - name: Run Speedrun Script
-        run: python speedrun.py
+```bash
+pip install -r requirements.txt
+python3 solver.py
